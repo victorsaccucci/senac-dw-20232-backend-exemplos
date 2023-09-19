@@ -10,6 +10,8 @@ CREATE TABLE exemplos.fabricantes (
 	CONSTRAINT fabricantes_pk PRIMARY KEY (id)
 );
 
+CREATE TABLE 
+
 CREATE TABLE exemplos.produtos (
 	id int auto_increment NOT NULL,
 	nome varchar(400) NOT NULL,
