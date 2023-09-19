@@ -18,6 +18,9 @@ public class Fabricante {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
+	private String cidade;
+	private String cep;
+	private String uf;
 	private String nome;
 	private String cnpj;
 	
@@ -29,14 +32,40 @@ public class Fabricante {
 		super();
 	}
 
-	public Fabricante(Integer id, String nome, String cnpj, List<Produto> produtos) {
+	public Fabricante(Integer id, String nome, String cnpj, List<Produto> produtos, String cidade, String cep, String uf) {
 		super();
 		this.id = id;
 		this.nome = nome;
 		this.cnpj = cnpj;
 		this.produtos = produtos;
+		this.cidade = cidade;
+		this.cep = cep;
+		this.uf = uf;
 	}
 
+	public void setCidade(String cidade) {
+		this.cidade = cidade;
+	}
+
+	public void setCep(String cep) {
+		this.cep = cep;
+	}
+
+	public void setUf(String uf) {
+		this.uf = uf;
+	}
+
+	public String getCidade() {
+		return cidade;
+	}
+
+	public String getCep() {
+		return cep;
+	}
+
+	public String getUf() {
+		return uf;
+	}
 
 	public Integer getId() {
 		return id;
