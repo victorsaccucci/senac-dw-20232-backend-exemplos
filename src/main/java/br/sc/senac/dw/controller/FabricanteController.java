@@ -22,6 +22,7 @@ public class FabricanteController {
 
     @GetMapping(value = "/listar")
     public List<Fabricante> findAll(){
-        return fabricanteService.findAll();
+        List<Fabricante> listarTodos = fabricanteService.findAll();
+        return listarTodos;
     }
 }
